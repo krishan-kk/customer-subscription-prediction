@@ -44,9 +44,6 @@ _Only accuracy is currently reported precision, recall, and a confusion matrix w
 
 - Test on a larger and/or real-world dataset
 - Add a reusable scoring module that takes new/external customer data as input and outputs renewal predictions, rather than only working within the notebook
-- Add precision, recall, F1-score, and a confusion matrix
-- Fix random seeds for reproducible results
-- Save the trained model (and the scaler) so it can be reloaded without retraining
 
 ## Tech Stack
 
