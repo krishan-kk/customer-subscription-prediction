@@ -4,16 +4,16 @@ End-to-end machine learning pipeline that predicts whether a customer will make 
 
 ## Business Problem
 
-Subscription businesses need to know, in advance, which customers are likely to renew or purchase again — so they can focus marketing spend and retention efforts on the right customers instead of contacting everyone equally. This project builds a binary classification model that predicts customer renewal from historical purchase and engagement behavior, supporting **targeted marketing** and **customer retention** decisions.
+Subscription businesses need to know, in advance, which customers are likely to renew or purchase again so they can focus marketing spend and retention efforts on the right customers instead of contacting everyone equally. This project builds a binary classification model that predicts customer renewal from historical purchase and engagement behavior, supporting **targeted marketing** and **customer retention** decisions.
 
 ## Dataset
 
 - **Source:** Simulated data representing 2 years of customer engagement on a fictional audiobook app. Each row represents one customer.
 - **Size:** 14,084 customers, 10 input features
 - **Features:** overall and average audiobook length purchased, overall and average price paid, whether the customer left a review, average review score, total minutes listened, completion rate, number of support requests, and days between last visit and purchase date
-- **Target:** binary — whether the customer made another purchase (~15.9% positive class, so the raw data is imbalanced)
+- **Target:** binary whether the customer made another purchase (~15.9% positive class, so the raw data is imbalanced)
 
-*Note: this is simulated data, not real customer records from an actual company.*
+_Note: this is simulated data, not real customer records from an actual company._
 
 ## Data Preprocessing (`Booksubscription_data_process.ipynb`)
 
@@ -38,15 +38,7 @@ No exploratory data analysis or feature engineering was performed beyond scaling
 - **Test accuracy: 83.26%**
 - In plain terms: the model correctly predicts whether a customer will re-purchase in roughly 5 out of 6 cases in this test set.
 
-*Only accuracy is currently reported — precision, recall, and a confusion matrix would give a fuller picture, especially since the original (pre-balancing) data is imbalanced. This is listed as a planned improvement below.*
-
-## Limitations
-
-- Built on simulated data, not real-world customer records
-- No random seed set in the data split or model training, so re-running the notebooks can produce a different split and a different result each time
-- Only accuracy is measured; no precision/recall/F1/confusion matrix yet
-- The trained model isn't currently saved to disk, so it must be retrained from the notebook to reproduce results
-- Only one model architecture was tried — no comparison against simpler baselines (e.g. logistic regression) or other architectures
+_Only accuracy is currently reported precision, recall, and a confusion matrix would give a fuller picture, especially since the original (pre-balancing) data is imbalanced. This is listed as a planned improvement below._
 
 ## Future Improvements
 
